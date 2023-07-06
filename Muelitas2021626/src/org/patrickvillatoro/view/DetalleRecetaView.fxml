@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.patrickvillatoro.controller.DetalleRecetaController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="274.0" style="-fx-background-color: #a4bce4;">
+         <children>
+            <VBox layoutY="140.0" prefHeight="210.0" prefWidth="184.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="40.0" prefWidth="184.0" style="-fx-background-radius: 50;" styleClass="button1" stylesheets="@../resource/MuelitasCSS.css" text="Nuevo">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="184.0" style="-fx-background-radius: 50;" styleClass="button1" stylesheets="@../resource/MuelitasCSS.css" text="Eliminar">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="184.0" style="-fx-background-radius: 50;" styleClass="button1" stylesheets="@../resource/MuelitasCSS.css" text="Editar">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="40.0" prefWidth="184.0" style="-fx-background-radius: 50;" styleClass="button1" stylesheets="@../resource/MuelitasCSS.css" text="Reporte">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Listar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="88.0" fitWidth="106.0" layoutX="29.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/DetalleReceta.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="4.0" layoutY="96.0" prefHeight="38.0" prefWidth="168.0" text="Detalle Receta">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="100.0" layoutX="54.0" layoutY="350.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/btn%20volver.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Pane layoutX="151.0" layoutY="-42.0" prefHeight="471.0" prefWidth="895.0" style="-fx-background-color: white; -fx-background-radius: 500;">
+         <children>
+            <ImageView fitHeight="357.0" fitWidth="480.0" layoutX="563.0" layoutY="-158.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 40; -fx-opacity: 0.4;">
+               <image>
+                  <Image url="@../image/fondoBurbuja.jpeg" />
+               </image>
+            </ImageView>
+            <GridPane fx:id="grpFecha" layoutX="57.0" layoutY="63.0" prefHeight="95.0" prefWidth="660.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="181.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.66665649414062" minWidth="10.0" prefWidth="116.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.33334350585938" minWidth="10.0" prefWidth="179.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.66668701171875" minWidth="10.0" prefWidth="130.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="180.0" text="Codigo Detalle Receta">
+                     <font>
+                        <Font name="Elephant" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="120.0" text="Dosis " GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Elephant" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="206.0" text="Codigo Receta" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Elephant" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoDetalleReceta" editable="false" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ComboBox fx:id="cmbCodigoReceta" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></ComboBox>
+                  <TextField fx:id="txtDosis" GridPane.columnIndex="3" />
+                  <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="171.0" text="Codigo Medicamento" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Elephant" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <ComboBox fx:id="cmbCodigoMedicamento" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <TableView fx:id="tblDetalleReceta" layoutX="57.0" layoutY="178.0" prefHeight="234.0" prefWidth="668.0" stylesheets="@../resource/MuelitasCSS.css">
+              <columns>
+                <TableColumn fx:id="colCodigoDetalleReceta" prefWidth="149.0" text="Cod Detalle Receta" />
+                <TableColumn fx:id="colDosis" prefWidth="176.0" text="Dosis" />
+                  <TableColumn fx:id="colCodigoReceta" minWidth="0.0" prefWidth="179.0" text="Codigo Receta" />
+                  <TableColumn fx:id="colCodigoMedicamento" minWidth="0.0" prefWidth="169.0" text="Codigo Medicamento" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

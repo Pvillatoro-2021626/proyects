@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMedicamentos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0398d852-6dc3-465b-aa72-b293702bedec">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="96"/>
+	<queryString>
+		<![CDATA[Select * from Medicamentos;]]>
+	</queryString>
+	<field name="codigoMedicamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresMedicamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="bb9b75bb-abb1-4f02-b462-b42bb35c1da6"/>
+				<imageExpression><![CDATA["C:\\Users\\Hilton\\Documents\\NetBeansProjects\\Muelitas2021626\\src\\org\\patrickvillatoro\\image\\fondoReport.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="16" width="220" height="30" uuid="3771c6d6-55b5-4aef-9e2f-e7680f154931"/>
+				<textElement textAlignment="Center">
+					<font fontName="Algerian" size="20"/>
+				</textElement>
+				<text><![CDATA[Medicamentos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="270" height="20" uuid="4ddfeb84-4b20-4027-9175-19c4b80ec006"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo del Medicamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="2" width="302" height="20" uuid="06c1d41f-1f41-416c-a15f-9464676828bf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres del Medicamento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="270" height="20" uuid="574bca4d-b417-48a8-9775-1f1ac0845b9c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoMedicamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="302" height="20" uuid="19723711-6b57-4031-88d6-ef67b77b345a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombresMedicamento}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="25" width="572" height="1" uuid="b0d36636-0a5e-4273-929c-1460a145daa6"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
